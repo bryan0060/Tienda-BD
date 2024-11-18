@@ -1,0 +1,14 @@
+<li class="list-group-item text-center">
+    <!--Mostrar la imagen-->
+    <img *ngIf="producto.imagen" [src]="producto.imagen" alt="Imagen del producto"
+    class="img-fluid mb-3" style="max-height: 200px;">
+    <div class="justify-content-center">
+        {{producto.descripcion}},
+    ${{producto.precio}}
+    </div>
+    
+    <button id="hola" type="submit" class="btn btn-info ms-4 mt-3" (click)="editarProducto(producto.id!)">
+        Editar Producto
+    </button>
+    
+</li>
