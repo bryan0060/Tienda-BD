@@ -3,11 +3,12 @@ import { Producto } from '../producto/producto.model';
 import { FormsModule } from '@angular/forms';
 import { ProductoService } from '../producto.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NavegacionComponent } from '../navegacion/navegacion.component';
 
 @Component({
   selector: 'app-formulario',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, NavegacionComponent],
   templateUrl: './formulario.component.html',
   styleUrl: './formulario.component.css'
 })
@@ -72,21 +73,21 @@ export class FormularioComponent {
     // Limpiamos los campos del formulario
     this.limpiarFormulario()
 
-    // Redirigir al inicio
-    this.router.navigate(['/']);
+    // Redirigir al listado
+    this.router.navigate(['/listado']);
 
   }
 
   cancelar(){
-    // Redirigimos al inicio
-    this.router.navigate(['/']);
+    // Redirigimos al listado
+    this.router.navigate(['/listado']);
   }
 
   eliminarProducto(){
     if(this.productoId !== null){
       this.productoService.eliminarProducto(this.productoId);
       this.limpiarFormulario();
-      this.router.navigate(['/']);
+      this.router.navigate(['/listado']);
     }
   }
 
