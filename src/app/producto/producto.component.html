@@ -2,8 +2,8 @@
     <!--Mostrar la imagen-->
     <img *ngIf="producto.imagen" [src]="producto.imagen" alt="Imagen del producto"
     class="img-fluid mb-3" style="max-height: 200px;">
-    <div class="justify-content-center">
-        {{producto.descripcion}},
+    <div class="justify-content-center fw-bold">
+        {{producto.descripcion}}:
     ${{producto.precio}}
     </div>
     
