@@ -1,9 +1,43 @@
-<header id="main-header" class="py-2 bg-info text-white">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h1><i class="bi bi-person"></i> Iniciar Sesión </h1>
-            </div>
+<header id="main-header" class="py-2 bg-danger text-white" style="border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5)">
+    <div class="d-flex">
+        <div class="w-25">
+            <h1>Supermercado La Estación</h1>
+        </div>
+        <div class="w-50">
+            <h1><i class="bi bi-person"></i> Iniciar Sesión </h1>
         </div>
     </div>
 </header>
+
+<section id="login">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Iniciar Sesión</h4>
+                    </div>
+                    <div class="card-body">
+                        <form (submit)="login()">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Correo
+                                </label>
+                                <input type="email" class="form-control" name="email"
+                                [(ngModel)]="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">
+                                    Contraseña
+                                </label>
+                                <input type="password" class="form-control" name="password"
+                                [(ngModel)]="password" required>
+                            </div>
+                            <input type="submit" value="Iniciar Sesion" class="btn btn-primary w-100">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
