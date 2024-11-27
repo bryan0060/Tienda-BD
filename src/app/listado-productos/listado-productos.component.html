@@ -4,7 +4,7 @@
     <div class="container mt-3">
         <h3>Lista de productos</h3>
 
-        <ul id="productos" class="w-75 mx-auto list-group list-group-horizontal">
+        <ul id="productos" class="w-75 mx-auto list-group list-group-horizontal flex-wrap">
             @for(productoElemento of productos; track productoElemento){
             <app-producto [producto]="productoElemento" />
             }
